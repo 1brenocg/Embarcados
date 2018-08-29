@@ -1,0 +1,13 @@
+cd /tftpboot/
+ln -s appGpio.bin link
+ls -l
+
+
+
+
+
+setenv uenvcmd "mw 0x44e35048 0xaaaa; sleep 1; mw 0x44e35048 0x5555;setenv serverip 10.4.2.1; setenv ipaddr 10.4.2.2; tftp 0x80000000 appGpio.bin;echo SCRIPT ATIVADO; go 0x80000000"
+
+run uenvcmd
+
+mw 0x44e35048 0xaaaa; sleep 1; mw 0x44e35048 0x5555; set ipaddr 10.4.2.2; set serverip 10.4.2.1; tftp 0x80000000 gpioInterrupt.bin; go 0x80000000
