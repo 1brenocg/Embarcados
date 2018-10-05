@@ -3,4 +3,4 @@
 ### Me lembro muito pouco, mas precisa:
 * tftboot
 * BeagleBone Black
-> placa para prototipar
+`<Placa para prototipar>`
